@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>تطبيق FastAPI</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>تطبيق FastAPI</h1>
+        <p
+          >هذا تطبيق ويب يعمل باستخدام إطار العمل FastAPI مع واجهة مستخدم
+          تفاعلية</p
+        >
+      </header>
+
+      <div class="api-test">
+        <h2>اختبار API</h2>
+        <div class="input-group">
+          <input
+            type="text"
+            id="userIdInput"
+            placeholder="أدخل رقم المستخدم (1, 2, 3)"
+          />
+          <button onclick="getUser()">جلب بيانات المستخدم</button>
+        </div>
+        <div class="input-group">
+          <button onclick="getAllUsers()">جلب جميع المستخدمين</button>
+        </div>
+        <div id="apiResult" class="result">
+          <p>ستظهر نتائج API هنا</p>
+        </div>
+      </div>
+
+      <div class="user-cards" id="userCards">
+        <!-- سيتم ملئ هذه المنطقة بطاقات المستخدمين -->
+      </div>
+
+      <div class="health-check">
+        <h2>فحص حالة الخادم</h2>
+        <button onclick="checkHealth()">فحص الحالة</button>
+        <div id="healthResult" class="result"></div>
+      </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+  </body>
+</html>
